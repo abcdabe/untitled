@@ -1,33 +1,35 @@
 let Q = 0
 input.onButtonPressed(Button.A, function () {
-    Q += randint(1, 3)
-    if (Q == 1) {
-        basic.showLeds(`
-            # . # . #
-            # . # . #
-            # # # # #
-            # . # . #
-            # . # . #
-            `)
-    } else if (Q == 2) {
-        basic.showLeds(`
-            # . . . #
-            . # . # .
-            . . # . .
-            . # . # .
-            # . . . #
-            `)
-    } else {
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
+    for (let index = 0; index < 12; index++) {
+        Q += randint(1, 3)
+        if (Q == 1) {
+            basic.showLeds(`
+                # . # . #
+                # . # . #
+                # # # # #
+                # . # . #
+                # . # . #
+                `)
+        } else if (Q == 2) {
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+        } else {
+            basic.showLeds(`
+                # # # # #
+                # # # # #
+                # # # # #
+                # # # # #
+                # # # # #
+                `)
+        }
+        basic.clearScreen()
     }
-    basic.clearScreen()
 })
 input.onButtonPressed(Button.B, function () {
-    music.playMelody("A F E F D G E F ", 120)
+    music.playMelody("F C5 B D E G B A ", 120)
 })
